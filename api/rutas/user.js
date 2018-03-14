@@ -8,7 +8,7 @@ var userRoute = app.Router();
 userRoute.post('/registrar',userController.saveUser);
 userRoute.get('/usuarios',userController.findUsers);
 userRoute.post('/login',userController.loginUser);
-userRoute.post('/actualizar-datos',[auth.ensureAuth],userController.updateUser);
+userRoute.put('/actualizar-datos',[auth.ensureAuth],userController.updateUser);
 
 
 module.exports = userRoute;
